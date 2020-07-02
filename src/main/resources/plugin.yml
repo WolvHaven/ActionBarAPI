@@ -1,7 +1,8 @@
 name: ActionBarAPI
 prefix: ABAPI
 version: ${project.version}
+api-version: 1.15
 description: APIs for deep action bar interactions
-author: nixxholas
+author: [connorlinfoot, nixxholas]
 
 main: com.connorlinfoot.actionbarapi.ActionBarAPI
