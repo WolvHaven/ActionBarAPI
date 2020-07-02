@@ -11,6 +11,7 @@ public class ActionBarMessageEvent extends Event {
 	private boolean cancelled = false;
 
 	public ActionBarMessageEvent(Player player, String message) {
+		super(true);
 		this.player = player;
 		this.message = message;
 	}
