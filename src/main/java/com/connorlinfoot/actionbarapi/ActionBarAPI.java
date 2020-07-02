@@ -43,8 +43,8 @@ public class ActionBarAPI extends JavaPlugin implements Listener {
         }
 
         // Call the event, if cancelled don't send Action Bar
-        ActionBarMessageEvent actionBarMessageEvent = new ActionBarMessageEvent(player, message);
-        Bukkit.getPluginManager().callEvent(actionBarMessageEvent);
+        final ActionBarMessageEvent actionBarMessageEvent = new ActionBarMessageEvent(player, message);
+        Bukkit.getScheduler().runTask(plugin, () -> Bukkit.getPluginManager().callEvent(actionBarMessageEvent));
         if (actionBarMessageEvent.isCancelled())
             return;
 
